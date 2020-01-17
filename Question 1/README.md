@@ -1,10 +1,10 @@
-To Run:
+# To Run:
     Navigate to /src and Execute:
         docker build -t message_server:latest .
 
         docker run --rm -p 8080:8080 message_server:latest
 
-Solution Notes:
+# Solution Notes:
     The solution utilizes http.server's SimpleHTTPServer to receive and process
     GET and POST requests. A dictionary is used to store the hashes as keys and 
     messages as its values. This is currently not a optimal implementation
@@ -25,7 +25,7 @@ Solution Notes:
     as well as maintaining a historical record of changes to the microservice. 
 
 
-Test Output:
+# Test Output:
     curl -X POST -H "Content-Type: application/json" -d '{"message": "foo"}' http://localhost:8080/messages
 
     {
